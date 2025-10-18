@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #B9FF66;
+    --secondary-color: #F3F3F3;
+    --dark-color: #191A23;
+    --black-color: #000000;
+}
+
+body {
+    /* fonts */
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+
+    /* fonts end */
+    background-color: white;
+    color: var(--black-color);
+
+}
+
+/* Universal Class */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.green {
+    background-color: var(--primary-color);
+}
+
+.grey {
+    background-color: var(--secondary-color);
+}
+
+.dark {
+    background-color: var(--dark-color);
+}
+
+/* Universal Class end*/
+
+.header-wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin: 0;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    gap: 35px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--primary-color);
+    background-color: var(--dark-color);
+}
+
+.hero {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    display: none;
+}
+
+.hero-txt h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.hero-txt p {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+/* Services Section */
+.services {
+    margin: 100px auto;
+    /* display: none; */
+}
+
+.services-hero {
+    margin-bottom: 100px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.services-hero h1 {
+    background-color: var(--primary-color);
+    padding: 0 7px;
+    border-radius: 7px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.services-hero p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Service Cards */
+.services-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 310px;
+    border-radius: 45px;
+    padding: 50px;
+    border: 1px solid var(--dark-color);
+    box-shadow: 0 5px 0 0 var(--dark-color);
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+.card-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 93px;
+}
+
+.card-text h2 {
+    font-size: 30px;
+    font-weight: 500;
+    width: fit-content;
+    padding: 0 7px;
+    border-radius: 7px;
+}
+
+/* cards ind styles */
+
+.card-1 h2 {
+    background-color: var(--primary-color);
+}
+
+.card-2 h2 {
+    background-color: white;
+}
+
+.card-3 h2 {
+    background-color: white;
+}
+
+.card-3 button {
+    color: white;
+}
+
+.card-4 h2 {
+    background-color: var(--primary-color);
+}
+
+/* cards ind styles end*/
+
+.card button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 164px;
+    height: 41px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    border: none;
+    background: transparent;
+}
+
+/* Things Happen */
+
+.things-happen-wrapper {
+    background-color: var(--secondary-color);
+    padding: 0 60px;
+    margin: 50px 0;
+    height: 374px;
+    border-radius: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.things-txt h3 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.things-txt p {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.things-txt button {
+    width: 288px;
+    height: 68px;
+    border: none;
+    border-radius: 15px;
+    background-color: #191A23;
+    color: white;
+    font-size: 20px;
+    font-family: "Space Grotesk", sans-serif;
+    transition: color 0.3s ease;
+}
+
+.things-txt button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+.things-img img {
+    margin-right: 75px;
+}
+
+/* Footer */
+.footer {
+    padding: 40px 60px;
+    background-color: var(--dark-color);
+    height: 230px;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+
+.footer-txt {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.footer-txt p {
+    color: white;
+    font-size: 14px;
+    margin-top: 17px;
+}
+
+
+
+/* Media Query */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    header {
+        flex-direction: column;
+        height: 130px;
+    }
+
+    .nav {
+        margin-top: 10px;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .hero-txt h1 {
+        font-size: 40px;
+        font-weight: 500;
+    }
+
+    .hero-txt p {
+        font-size: 20px;
+        font-weight: 400;
+        margin-top: 30px;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    /* Services Section */
+    .services {
+        margin: 20px auto;
+    }
+
+    .services-hero {
+        margin-bottom: 50px;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .services-hero h1 {
+        background-color: var(--primary-color);
+        padding: 0 7px;
+        border-radius: 7px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    /* Service Cards */
+    .services-cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 40px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 350px;
+        height: 280px;
+        border-radius: 15px;
+        padding: 10px;
+        border: 1px solid var(--dark-color);
+        box-shadow: 0 5px 0 0 var(--dark-color);
+    }
+
+    .card-text-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-text h2 {
+        font-size: 20px;
+        font-weight: 500;
+        width: fit-content;
+        padding: 0 7px;
+        border-radius: 7px;
+    }
+
+    /* Things Happen */
+
+    .things-happen-wrapper {
+        padding: 40px 20px;
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 794px;
+    }
+
+    .things-txt h3 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .things-txt p {
+        font-size: 18px;
+        font-weight: 400;
+        margin: 30px 0;
+    }
+
+    .things-txt button {
+        width: 288px;
+        height: 68px;
+        border: none;
+        border-radius: 15px;
+        background-color: #191A23;
+        color: white;
+        font-size: 20px;
+        font-family: "Space Grotesk", sans-serif;
+    }
+
+    .things-img img {
+        margin-right: 0;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px;
+        background-color: var(--dark-color);
+        height: 230px;
+    }
+
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-container {
+        margin-top: 30px;
+    }
+
+    .footer-txt {
+        margin-top: 30px;
+        text-align: center;
+    }
+}
